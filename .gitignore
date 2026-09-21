@@ -1,4 +1,10 @@
 .venv/
 __pycache__/
 *.pyc
-flight.mp4
+*.mp4
+frames/
+seam_results/
+sequence_seam_results/
+
+# Ignore root-level experiment previews; retain curated results/ images.
+/*.jpg
