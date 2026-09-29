@@ -6,5 +6,5 @@ frames/
 seam_results/
 sequence_seam_results/
 
-# Ignore root-level experiment previews; retain curated results/ images.
-/*.jpg
+# Ignore Week 2 experiment previews; retain curated results/ images.
+/week2/*.jpg
