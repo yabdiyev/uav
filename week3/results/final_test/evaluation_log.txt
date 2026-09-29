@@ -1,0 +1,14 @@
+/content
+Ultralytics YOLOv8.2.103 🚀 Python-3.13.15 torch-2.11.0+cu128 CUDA:0 (Tesla T4, 14913MiB)
+Model summary (fused): 168 layers, 11,127,132 parameters, 0 gradients, 28.4 GFLOPs
+val: Scanning /content/datasets/football-original/test/labels... 25 images, 0 backgrounds, 0 corrupt: 100% 25/25 [00:00<00:00, 1819.69it/s]
+val: New cache created: /content/datasets/football-original/test/labels.cache
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 2/2 [00:01<00:00,  1.01it/s]
+                   all         25        598      0.916      0.784      0.843      0.578
+                  ball         23         24      0.863      0.263      0.459      0.183
+            goalkeeper         19         19       0.91      0.947      0.952      0.719
+                player         25        499      0.955      0.979      0.988      0.777
+               referee         25         56      0.937      0.946      0.972      0.634
+Speed: 4.9ms preprocess, 18.7ms inference, 0.0ms loss, 3.6ms postprocess per image
+Results saved to runs/detect/final_test_50epochs
+💡 Learn more at https://docs.ultralytics.com/modes/val
