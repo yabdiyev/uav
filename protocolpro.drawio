@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="protocol-pro" name="Protocol Pro Wiring v3">
+    <mxGraphModel dx="1654" dy="1063" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;" value="&lt;b&gt;Protocol Pro: Autonomy Quadcopter Wiring Diagram&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:12px&#39;&gt;Cube Orange+ (PX4) + Jetson Orin Nano Super + Holybro X500 V2 airframe&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="900" x="300" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" value="&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#d62728&quot;&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; Power (4S battery voltage / 5V)&lt;br&gt;&lt;font color=&quot;#1f77b4&quot;&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; UART (TX/RX crossed + GND)&lt;br&gt;&lt;font color=&quot;#2ca02c&quot;&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; CAN / DroneCAN (CANH/CANL)&lt;br&gt;&lt;font color=&quot;#ff7f0e&quot;&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; SBUS (inverted serial)&lt;br&gt;&lt;font color=&quot;#9467bd&quot;&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt;&amp;nbsp;DShot motor signal&lt;br&gt;&lt;font color=&quot;#17becf&quot;&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; USB 3&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;&lt;b&gt;- - -&lt;/b&gt;&lt;/font&gt; Wireless link" vertex="1">
+          <mxGeometry height="150" width="300" x="60" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=12;strokeWidth=3;" value="&lt;b style=&quot;font-size:15px&quot;&gt;CubePilot Cube Orange+&lt;/b&gt;&lt;br&gt;Standard Set (standard carrier board)&lt;br&gt;Firmware: PX4" vertex="1">
+          <mxGeometry height="300" width="400" x="520" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="flow" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=12;" value="&lt;b&gt;ARK Flow&lt;/b&gt;&amp;nbsp;&lt;br&gt;Optical flow + ToF rangefinder" vertex="1">
+          <mxGeometry height="80" width="200" x="500" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gps" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=12;" value="&lt;b&gt;CubePilot Here4&lt;/b&gt;&lt;br&gt;RTK GNSS + compass" vertex="1">
+          <mxGeometry height="80" width="200" x="860" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rctx" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ef6c00;fontSize=12;" value="&lt;b&gt;RC Transmitter&lt;/b&gt;&lt;br&gt;RadioMaster TX16S 4-in-1&lt;br&gt;(FrSky D16 mode, 2.4 GHz)" vertex="1">
+          <mxGeometry height="70" width="200" x="80" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="rcrx" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ef6c00;fontSize=12;" value="&lt;b&gt;FrSky R-XSR Receiver&lt;/b&gt;&lt;br&gt;2.4 GHz, SBUS output" vertex="1">
+          <mxGeometry height="80" width="200" x="80" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="sik" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=12;" value="&lt;b&gt;Holybro SiK Telemetry Radio V3&lt;/b&gt;&lt;br&gt;915 MHz, 100 mW (air unit)" vertex="1">
+          <mxGeometry height="70" width="260" x="1100" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="jetson" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=11;" value="&lt;b&gt;NVIDIA Jetson Orin Nano Super Developer Kit&lt;/b&gt;&lt;br&gt;Onboard computer (ROS 2)&lt;br&gt;DC jack: 9-20 V in" vertex="1">
+          <mxGeometry height="150" width="260" x="1100" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="gcs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#616161;fontSize=12;" value="&lt;b&gt;Ground Station Laptop&lt;/b&gt;&lt;br&gt;QGroundControl&lt;br&gt;(SiK ground unit on USB)" vertex="1">
+          <mxGeometry height="80" width="220" x="1440" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="cam1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f7fa;strokeColor=#00838f;fontSize=12;" value="&lt;b&gt;Intel RealSense D455&lt;/b&gt;&lt;br&gt;Depth camera 1 (front)" vertex="1">
+          <mxGeometry height="70" width="220" x="1440" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="cam2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f7fa;strokeColor=#00838f;fontSize=12;" value="&lt;b&gt;Intel RealSense D455&lt;/b&gt;&lt;br&gt;Depth camera 2 (rear / down)" vertex="1">
+          <mxGeometry height="70" width="220" x="1440" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="battery" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontSize=12;" value="&lt;b&gt;4S LiPo Battery&lt;/b&gt;&lt;br&gt;14.8 V nominal" vertex="1">
+          <mxGeometry height="70" width="140" x="60" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="pm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontSize=12;" value="&lt;b&gt;CubePilot Power Brick Mini&lt;/b&gt;&lt;br&gt;XT60, V + I sensing" vertex="1">
+          <mxGeometry height="70" width="190" x="240" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="pdb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontSize=12;" value="&lt;b&gt;Holybro X500 V2 PDB&lt;/b&gt;&lt;br&gt;XT60 in, XT30 out" vertex="1">
+          <mxGeometry height="60" width="190" x="240" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="escbox" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7b1fa2;fontSize=11;rounded=0;dashed=1;align=left;verticalAlign=middle;spacingLeft=5;labelPosition=right;verticalLabelPosition=middle;" value="Holybro BLHeli S 20A ESCs (x4)" vertex="1">
+          <mxGeometry height="120" width="440" x="495" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="esc1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#7b1fa2;fontSize=12;" value="ESC 1" vertex="1">
+          <mxGeometry height="60" width="100" x="500" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="mot1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#424242;fontSize=11;arcSize=40;" value="Motor 1&lt;br&gt;Holybro 2216 KV920" vertex="1">
+          <mxGeometry height="60" width="100" x="500" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="esc2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#7b1fa2;fontSize=12;" value="ESC 2" vertex="1">
+          <mxGeometry height="60" width="100" x="610" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="mot2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#424242;fontSize=11;arcSize=40;" value="Motor 2&lt;br&gt;Holybro 2216 KV920" vertex="1">
+          <mxGeometry height="60" width="100" x="610" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="esc3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#7b1fa2;fontSize=12;" value="ESC 3" vertex="1">
+          <mxGeometry height="60" width="100" x="720" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="mot3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#424242;fontSize=11;arcSize=40;" value="Motor 3&lt;br&gt;Holybro 2216 KV920" vertex="1">
+          <mxGeometry height="60" width="100" x="720" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="esc4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#7b1fa2;fontSize=12;" value="ESC 4" vertex="1">
+          <mxGeometry height="60" width="100" x="830" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="mot4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#424242;fontSize=11;arcSize=40;" value="Motor 4&lt;br&gt;Holybro 2216 KV920" vertex="1">
+          <mxGeometry height="60" width="100" x="830" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="e_can1" edge="1" parent="1" source="flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#2ca02c;fontSize=11;labelBackgroundColor=#ffffff;startArrow=classic;endArrow=classic;exitX=0.5;exitY=1;entryX=0.2;entryY=0;" target="fc" value="CAN1 (DroneCAN)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_can_chain" edge="1" parent="1" source="flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#2ca02c;fontSize=11;labelBackgroundColor=#ffffff;startArrow=classic;endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="gps" value="CAN (daisy chain)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_txrx" edge="1" parent="1" source="rctx" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#666666;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" target="rcrx" value="2.4 GHz RF">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rc" edge="1" parent="1" source="rcrx" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#ff7f0e;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.2333;" target="fc" value="SBUS to RC IN">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sik" edge="1" parent="1" source="sik" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#1f77b4;fontSize=11;labelBackgroundColor=#ffffff;startArrow=classic;endArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.15;" target="fc" value="UART TELEM1&lt;br&gt;MAVLink">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_jet" edge="1" parent="1" source="jetson" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#1f77b4;fontSize=11;labelBackgroundColor=#ffffff;startArrow=classic;endArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.5833;" target="fc" value="UART TELEM2&lt;br&gt;uXRCE-DDS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gcs" edge="1" parent="1" source="sik" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#666666;fontSize=11;labelBackgroundColor=#ffffff;startArrow=classic;endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" target="gcs" value="915 MHz&lt;br&gt;MAVLink">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cam1" edge="1" parent="1" source="cam1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#17becf;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.2333;" target="jetson" value="USB 3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cam2" edge="1" parent="1" source="cam2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#17becf;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.8333;" target="jetson" value="USB 3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bat_pm" edge="1" parent="1" source="battery" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#d62728;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="pm" value="4S">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pm_pdb" edge="1" parent="1" source="pm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#d62728;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="pdb" value="4S">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pm_fc" edge="1" parent="1" source="pm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#d62728;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.85;" target="fc" value="POWER1&lt;br&gt;(V/I sense + 5V)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pdb_esc" edge="1" parent="1" source="pdb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#d62728;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.9167;" target="escbox" value="4S">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pdb_jet" edge="1" parent="1" source="pdb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#d62728;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" target="jetson" value="4S to DC input&amp;nbsp;">
+          <mxGeometry relative="1" x="-0.1756" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="335" y="930" />
+              <mxPoint x="1230" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_fc_esc1" edge="1" parent="1" source="fc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#9467bd;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.125;exitY=1;entryX=0.5;entryY=0;" target="esc1" value="AUX 1 - DShot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_esc_mot1" edge="1" parent="1" source="esc1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#424242;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="mot1" value="3-phase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fc_esc2" edge="1" parent="1" source="fc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#9467bd;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.375;exitY=1;entryX=0.5;entryY=0;" target="esc2" value="AUX 2 - DShot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_esc_mot2" edge="1" parent="1" source="esc2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#424242;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="mot2" value="3-phase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fc_esc3" edge="1" parent="1" source="fc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#9467bd;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.625;exitY=1;entryX=0.5;entryY=0;" target="esc3" value="AUX 3 - DShot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_esc_mot3" edge="1" parent="1" source="esc3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#424242;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="mot3" value="3-phase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fc_esc4" edge="1" parent="1" source="fc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#9467bd;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.875;exitY=1;entryX=0.5;entryY=0;" target="esc4" value="AUX 4 - DShot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_esc_mot4" edge="1" parent="1" source="esc4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#424242;fontSize=11;labelBackgroundColor=#ffffff;startArrow=none;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="mot4" value="3-phase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
